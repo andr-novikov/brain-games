@@ -1,4 +1,4 @@
-instal:
+install:
 	npm install
 
 start:
