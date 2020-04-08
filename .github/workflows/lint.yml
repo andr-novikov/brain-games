@@ -21,7 +21,7 @@ jobs:
         # Install and build project
         run: |
           make install
-      - name: Run linter
+      - name: run linter
         # Run Linter
         run: |
           make lint
