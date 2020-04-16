@@ -1,5 +1,5 @@
 # Name of workflow
-name: Lint
+name: Eslint
 
 # Trigger the workflow on push or pull request
 on:

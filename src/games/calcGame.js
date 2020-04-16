@@ -1,6 +1,10 @@
 import getRandomNumber from '../getRandomNumber.js';
 
-const calcGame = () => {
+const calcGame = (str) => {
+  if (str === 'rules') {
+    return 'What is the result of the expression?';
+  }
+
   const arrayMathOperators = ['+', '-', '*'];
   const randomMathOperator = arrayMathOperators[getRandomNumber(0, arrayMathOperators.length)];
   const randomNumber1 = getRandomNumber();

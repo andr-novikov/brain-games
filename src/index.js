@@ -14,6 +14,8 @@ export const greeting = () => {
 };
 
 export const gameplay = (nameGame) => {
+  console.log(nameGame('rules'));
+
   for (let i = 0; i < 3; i += 1) {
     const arrayQAndA = nameGame();
     const question = arrayQAndA[0];
@@ -37,23 +39,18 @@ export const chooseGame = () => {
   const index = readlineSync.keyInSelect(games, 'Which games?', { cancel: 'Exit' });
   switch (index) {
     case 0:
-      console.log('Answer "yes" if the number is even, otherwise answer "no".');
       gameplay(evenGame);
       break;
     case 1:
-      console.log('What is the result of the expression?');
       gameplay(calcGame);
       break;
     case 2:
-      console.log('Find the greatest common divisor of given numbers.');
       gameplay(gcdGame);
       break;
     case 3:
-      console.log('What number is missing in the progression?');
       gameplay(progressionGame);
       break;
     case 4:
-      console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
       gameplay(primeGame);
       break;
     default:

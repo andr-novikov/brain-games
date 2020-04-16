@@ -13,7 +13,11 @@ const getGcd = (a, b) => {
   return gcd;
 };
 
-const gcdGame = () => {
+const gcdGame = (str) => {
+  if (str === 'rules') {
+    return 'Find the greatest common divisor of given numbers.';
+  }
+
   const randomNumber1 = getRandomNumber();
   const randomNumber2 = getRandomNumber();
   const question = `${randomNumber1} ${randomNumber2}`;

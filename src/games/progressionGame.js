@@ -1,6 +1,10 @@
 import getRandomNumber from '../getRandomNumber.js';
 
-const progressionGame = () => {
+const progressionGame = (str) => {
+  if (str === 'rules') {
+    return 'What number is missing in the progression?';
+  }
+
   const progression = [];
   progression.push(getRandomNumber());
   const commonDifference = getRandomNumber();
