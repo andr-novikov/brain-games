@@ -5,33 +5,31 @@ import gcdGame from './games/gcdGame.js';
 import progressionGame from './games/progressionGame.js';
 import primeGame from './games/primeGame.js';
 
-let username = '';
+let userName = '';
 
-export const greeting = () => {
+export const getUserName = () => {
   console.log('Welcome to the Brain Games!');
-  username = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${username}!`);
+  userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
 };
 
-export const gameplay = (nameGame) => {
+export const playGame = (nameGame) => {
   console.log(nameGame('rules'));
 
   for (let i = 0; i < 3; i += 1) {
-    const arrayQAndA = nameGame();
-    const question = arrayQAndA[0];
-    const correctAnswer = arrayQAndA[1];
-
+    const [question, correctAnswer] = nameGame();
     console.log(`Question: ${question}`);
     const getAnswer = readlineSync.question('Your answer: ');
 
     if (correctAnswer === getAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`"${getAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${username}!`);
+      console.log(`"${getAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`);
       return;
     }
   }
-  console.log(`Congratulations, ${username}!`);
+
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export const chooseGame = () => {
@@ -39,19 +37,19 @@ export const chooseGame = () => {
   const index = readlineSync.keyInSelect(games, 'Which games?', { cancel: 'Exit' });
   switch (index) {
     case 0:
-      gameplay(evenGame);
+      playGame(evenGame);
       break;
     case 1:
-      gameplay(calcGame);
+      playGame(calcGame);
       break;
     case 2:
-      gameplay(gcdGame);
+      playGame(gcdGame);
       break;
     case 3:
-      gameplay(progressionGame);
+      playGame(progressionGame);
       break;
     case 4:
-      gameplay(primeGame);
+      playGame(primeGame);
       break;
     default:
       console.log('Exit');

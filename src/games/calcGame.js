@@ -1,12 +1,13 @@
 import getRandomNumber from '../getRandomNumber.js';
 
-const calcGame = (str) => {
+export default (str) => {
   if (str === 'rules') {
     return 'What is the result of the expression?';
   }
 
-  const arrayMathOperators = ['+', '-', '*'];
-  const randomMathOperator = arrayMathOperators[getRandomNumber(0, arrayMathOperators.length)];
+  const mathOperators = ['+', '-', '*'];
+  const randomIndex = getRandomNumber(0, mathOperators.length);
+  const randomMathOperator = mathOperators[randomIndex];
   const randomNumber1 = getRandomNumber();
   const randomNumber2 = getRandomNumber();
   const mathExpression = `${randomNumber1} ${randomMathOperator} ${randomNumber2}`;
@@ -27,9 +28,9 @@ const calcGame = (str) => {
   }
 
   const question = mathExpression;
-  const correctAnswer = String(result);
+  const answer = String(result);
+  const qAndA = [];
+  qAndA.push(question, answer);
 
-  return [question, correctAnswer];
+  return qAndA;
 };
-
-export default calcGame;

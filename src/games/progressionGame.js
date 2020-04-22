@@ -1,6 +1,6 @@
 import getRandomNumber from '../getRandomNumber.js';
 
-const progressionGame = (str) => {
+export default (str) => {
   if (str === 'rules') {
     return 'What number is missing in the progression?';
   }
@@ -15,11 +15,12 @@ const progressionGame = (str) => {
   }
 
   const indexHiddenElement = getRandomNumber(0, progression.length);
-  const correctAnswer = String(progression[indexHiddenElement]);
+  const answer = String(progression[indexHiddenElement]);
   progression[indexHiddenElement] = '..';
   const question = progression.join(' ');
 
-  return [question, correctAnswer];
-};
+  const qAndA = [];
+  qAndA.push(question, answer);
 
-export default progressionGame;
+  return qAndA;
+};

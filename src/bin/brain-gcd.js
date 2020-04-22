@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { greeting, gameplay } from '../index.js';
+import { getUserName, playGame } from '../index.js';
 import gcdGames from '../games/gcdGame.js';
 
-greeting();
-gameplay(gcdGames);
+getUserName();
+playGame(gcdGames);

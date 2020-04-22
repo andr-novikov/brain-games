@@ -4,7 +4,7 @@
 ![Eslint](https://github.com/andr-novikov/backend-project-lvl1/workflows/Eslint/badge.svg)
 
 ---
-## Setup
+## Install
 [![asciicast](https://asciinema.org/a/P9J7QxEQmBTNx5KTGVLGjJ33P.svg)](https://asciinema.org/a/P9J7QxEQmBTNx5KTGVLGjJ33P)
 
 ---

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { greeting, chooseGame } from '../index.js';
+import { getUserName, chooseGame } from '../index.js';
 
-greeting();
+getUserName();
 chooseGame();

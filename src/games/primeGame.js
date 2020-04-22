@@ -15,14 +15,15 @@ const isPrime = (number) => {
   return 'yes';
 };
 
-const primeGame = (str) => {
+export default (str) => {
   if (str === 'rules') {
     return 'Answer "yes" if given number is prime. Otherwise answer "no".';
   }
 
   const question = getRandomNumber();
-  const correctAnswer = isPrime(question);
-  return [question, correctAnswer];
-};
+  const answer = isPrime(question);
+  const qAndA = [];
+  qAndA.push(question, answer);
 
-export default primeGame;
+  return qAndA;
+};
