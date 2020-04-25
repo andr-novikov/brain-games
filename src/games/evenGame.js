@@ -1,14 +1,20 @@
 import getRandomNumber from '../getRandomNumber.js';
+import playGame from '../index.js';
 
-export default (str) => {
-  if (str === 'rules') {
-    return 'Answer "yes" if the number is even, otherwise answer "no".';
-  }
-
+const getQAndA = () => {
   const question = getRandomNumber();
   const answer = question % 2 === 0 ? 'yes' : 'no';
-  const qAndA = [];
-  qAndA.push(question, answer);
 
-  return qAndA;
+  return [question, answer];
+};
+
+export default () => {
+  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const questionsAndAnswers = [];
+
+  while (questionsAndAnswers.length < 3) {
+    questionsAndAnswers.push(getQAndA());
+  }
+
+  return playGame(questionsAndAnswers, rules);
 };

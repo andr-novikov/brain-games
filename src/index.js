@@ -1,23 +1,15 @@
+/* eslint no-restricted-syntax: ["off", "ForOfStatement"] */
 import readlineSync from 'readline-sync';
-import evenGame from './games/evenGame.js';
-import calcGame from './games/calcGame.js';
-import gcdGame from './games/gcdGame.js';
-import progressionGame from './games/progressionGame.js';
-import primeGame from './games/primeGame.js';
 
-let userName = '';
-
-export const getUserName = () => {
+export default (questionsAndAnswers, rules) => {
   console.log('Welcome to the Brain Games!');
-  userName = readlineSync.question('May I have your name? ');
+  const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-};
 
-export const playGame = (nameGame) => {
-  console.log(nameGame('rules'));
+  console.log(rules);
 
-  for (let i = 0; i < 3; i += 1) {
-    const [question, correctAnswer] = nameGame();
+  for (const stepGame of questionsAndAnswers) {
+    const [question, correctAnswer] = stepGame;
     console.log(`Question: ${question}`);
     const getAnswer = readlineSync.question('Your answer: ');
 
@@ -30,28 +22,4 @@ export const playGame = (nameGame) => {
   }
 
   console.log(`Congratulations, ${userName}!`);
-};
-
-export const chooseGame = () => {
-  const games = ['Parity Check', 'Calculator', 'Greatest Common Divisor', 'Arithmetic progression', 'Number Is Prime?'];
-  const index = readlineSync.keyInSelect(games, 'Which games?', { cancel: 'Exit' });
-  switch (index) {
-    case 0:
-      playGame(evenGame);
-      break;
-    case 1:
-      playGame(calcGame);
-      break;
-    case 2:
-      playGame(gcdGame);
-      break;
-    case 3:
-      playGame(progressionGame);
-      break;
-    case 4:
-      playGame(primeGame);
-      break;
-    default:
-      console.log('Exit');
-  }
 };

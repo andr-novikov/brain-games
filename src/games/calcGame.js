@@ -1,10 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
+import playGame from '../index.js';
 
-export default (str) => {
-  if (str === 'rules') {
-    return 'What is the result of the expression?';
-  }
-
+const getQAndA = () => {
   const mathOperators = ['+', '-', '*'];
   const randomIndex = getRandomNumber(0, mathOperators.length);
   const randomMathOperator = mathOperators[randomIndex];
@@ -29,8 +26,17 @@ export default (str) => {
 
   const question = mathExpression;
   const answer = String(result);
-  const qAndA = [];
-  qAndA.push(question, answer);
 
-  return qAndA;
+  return [question, answer];
+};
+
+export default () => {
+  const rules = 'What is the result of the expression?';
+  const questionsAndAnswers = [];
+
+  while (questionsAndAnswers.length < 3) {
+    questionsAndAnswers.push(getQAndA());
+  }
+
+  return playGame(questionsAndAnswers, rules);
 };
