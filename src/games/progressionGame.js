@@ -1,31 +1,26 @@
 import getRandomNumber from '../getRandomNumber.js';
-import playGame from '../index.js';
 
-const getQAndA = () => {
-  const progression = [];
-  progression.push(getRandomNumber());
-  const commonDifference = getRandomNumber();
+export default (str) => {
+  const description = 'What number is missing in the progression?';
 
-  while (progression.length < 10) {
-    const nextNumber = progression[progression.length - 1] + commonDifference;
-    progression.push(nextNumber);
+  if (str === 'description') {
+    return description;
   }
 
-  const indexHiddenElement = getRandomNumber(0, progression.length);
-  const answer = String(progression[indexHiddenElement]);
+  const progression = [];
+  const startOfProgression = getRandomNumber();
+  const commonDifference = getRandomNumber();
+  const progressionLength = 10;
+
+  for (let i = 0; i < progressionLength; i += 1) {
+    progression[i] = startOfProgression + commonDifference * i;
+  }
+
+  const indexHiddenElement = getRandomNumber(0, progression.length - 1);
   progression[indexHiddenElement] = '..';
+
+  const answer = String(startOfProgression + commonDifference * indexHiddenElement);
   const question = progression.join(' ');
 
   return [question, answer];
-};
-
-export default () => {
-  const rules = 'What number is missing in the progression?';
-  const questionsAndAnswers = [];
-
-  while (questionsAndAnswers.length < 3) {
-    questionsAndAnswers.push(getQAndA());
-  }
-
-  return playGame(questionsAndAnswers, rules);
 };

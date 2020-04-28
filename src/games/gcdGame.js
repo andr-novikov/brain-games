@@ -1,5 +1,4 @@
 import getRandomNumber from '../getRandomNumber.js';
-import playGame from '../index.js';
 
 const getGcd = (a, b) => {
   if (a === 0 || b === 0) {
@@ -15,23 +14,17 @@ const getGcd = (a, b) => {
   return gcd;
 };
 
-const getQAndA = () => {
-  const randomNumber1 = getRandomNumber();
-  const randomNumber2 = getRandomNumber();
-  const gcd = getGcd(randomNumber1, randomNumber2);
-  const question = `${randomNumber1} ${randomNumber2}`;
-  const answer = String(gcd);
+export default (str) => {
+  const description = 'Find the greatest common divisor of given numbers.';
 
-  return [question, answer];
-};
-
-export default () => {
-  const rules = 'Find the greatest common divisor of given numbers.';
-  const questionsAndAnswers = [];
-
-  while (questionsAndAnswers.length < 3) {
-    questionsAndAnswers.push(getQAndA());
+  if (str === 'description') {
+    return description;
   }
 
-  return playGame(questionsAndAnswers, rules);
+  const randomNumber1 = getRandomNumber();
+  const randomNumber2 = getRandomNumber();
+  const question = `${randomNumber1} ${randomNumber2}`;
+  const answer = String(getGcd(randomNumber1, randomNumber2));
+
+  return [question, answer];
 };

@@ -1,22 +1,24 @@
 /* eslint no-restricted-syntax: ["off", "ForOfStatement"] */
 import readlineSync from 'readline-sync';
 
-export default (questionsAndAnswers, rules) => {
+export default (nameGame) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  console.log(rules);
+  console.log(nameGame('description'));
 
-  for (const stepGame of questionsAndAnswers) {
-    const [question, correctAnswer] = stepGame;
+  const numberOfGameSteps = 3;
+  for (let i = 0; i < numberOfGameSteps; i += 1) {
+    const [question, correctAnswer] = nameGame();
     console.log(`Question: ${question}`);
     const getAnswer = readlineSync.question('Your answer: ');
 
     if (correctAnswer === getAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`"${getAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`);
+      console.log(`"${getAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }

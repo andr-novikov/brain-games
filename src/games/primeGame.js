@@ -1,35 +1,29 @@
 import getRandomNumber from '../getRandomNumber.js';
-import playGame from '../index.js';
 
 const isPrime = (number) => {
   if (number <= 1) {
-    return 'no';
+    return false;
   }
 
   let divisor = 2;
   while (divisor <= number / 2) {
     if (number % divisor === 0) {
-      return 'no';
+      return false;
     }
     divisor += 1;
   }
-  return 'yes';
+  return true;
 };
 
-const getQAndA = () => {
-  const question = getRandomNumber();
-  const answer = isPrime(question);
+export default (str) => {
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  return [question, answer];
-};
-
-export default () => {
-  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const questionsAndAnswers = [];
-
-  while (questionsAndAnswers.length < 3) {
-    questionsAndAnswers.push(getQAndA());
+  if (str === 'description') {
+    return description;
   }
 
-  return playGame(questionsAndAnswers, rules);
+  const question = getRandomNumber();
+  const answer = isPrime(question) ? 'yes' : 'no';
+
+  return [question, answer];
 };
