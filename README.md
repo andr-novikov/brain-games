@@ -23,13 +23,13 @@ At the moment you can play the following games:
 
 ### Install from GitHub
 ``` sh
-$ git clone https://github.com/andr-novikov/backend-project-lvl1.git  
+$ git clone https://github.com/andr-novikov/backend-project-lvl1.git
 $ make install
 ```
 
 ### Run Games
 ``` sh
-$ make start   
+$ make start
 ```
 
 ---
