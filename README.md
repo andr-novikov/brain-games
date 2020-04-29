@@ -20,8 +20,13 @@ At the moment you can play the following games:
 ![Eslint](https://github.com/andr-novikov/backend-project-lvl1/workflows/Eslint/badge.svg)
 
 ---
-### Install
-[![asciicast](https://asciinema.org/a/P9J7QxEQmBTNx5KTGVLGjJ33P.svg)](https://asciinema.org/a/P9J7QxEQmBTNx5KTGVLGjJ33P)
+
+### Install from GitHub
+> $ git clone https://github.com/andr-novikov/backend-project-lvl1.git  
+> $ make install
+
+### Run Games
+> $ make start   
 
 ---
 ### "Parity Check" gameplay demonstration
