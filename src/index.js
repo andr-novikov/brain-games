@@ -8,13 +8,13 @@ export default (nameGame) => {
 
   console.log(nameGame('description'));
 
-  const numberOfGameSteps = 3;
-  for (let i = 0; i < numberOfGameSteps; i += 1) {
+  const numberOfGameRounds = 3;
+  for (let i = 0; i < numberOfGameRounds; i += 1) {
     const [question, correctAnswer] = nameGame();
     console.log(`Question: ${question}`);
     const getAnswer = readlineSync.question('Your answer: ');
 
-    if (correctAnswer === getAnswer) {
+    if (getAnswer === correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(`"${getAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
