@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andr-novikov/backend-project-lvl1.git"
+    "url": "git+https://github.com/andr-novikov/backend-educational-project-lvl1.git"
   },
   "author": "Andrey Novikov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andr-novikov/backend-project-lvl1/issues"
+    "url": "https://github.com/andr-novikov/backend-educational-project-lvl1/issues"
   },
-  "homepage": "https://github.com/andr-novikov/backend-project-lvl1#readme",
+  "homepage": "https://github.com/andr-novikov/backend-educational-project-lvl1#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
