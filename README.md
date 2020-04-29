@@ -22,11 +22,15 @@ At the moment you can play the following games:
 ---
 
 ### Install from GitHub
-> $ git clone https://github.com/andr-novikov/backend-project-lvl1.git  
-> $ make install
+``` sh
+$ git clone https://github.com/andr-novikov/backend-project-lvl1.git  
+$ make install
+```
 
 ### Run Games
-> $ make start   
+``` sh
+$ make start   
+```
 
 ---
 ### "Parity Check" gameplay demonstration
