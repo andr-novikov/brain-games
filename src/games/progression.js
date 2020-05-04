@@ -1,12 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
+import startGame from '../index.js';
 
-export default (str) => {
-  const description = 'What number is missing in the progression?';
-
-  if (str === 'description') {
-    return description;
-  }
-
+const generateQuestionAndAnswer = () => {
   const progression = [];
   const startOfProgression = getRandomNumber();
   const commonDifference = getRandomNumber();
@@ -23,4 +18,10 @@ export default (str) => {
   const question = progression.join(' ');
 
   return [question, answer];
+};
+
+export default () => {
+  const description = 'What number is missing in the progression?';
+
+  return startGame(description, generateQuestionAndAnswer);
 };

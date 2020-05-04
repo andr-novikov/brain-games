@@ -1,12 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
+import startGame from '../index.js';
 
-export default (str) => {
-  const description = 'What is the result of the expression?';
-
-  if (str === 'description') {
-    return description;
-  }
-
+const generateQuestionAndAnswer = () => {
   const mathOperators = ['+', '-', '*'];
   const randomIndex = getRandomNumber(0, mathOperators.length - 1);
   const randomMathOperator = mathOperators[randomIndex];
@@ -14,7 +9,7 @@ export default (str) => {
   const randomNumber2 = getRandomNumber();
   const question = `${randomNumber1} ${randomMathOperator} ${randomNumber2}`;
 
-  let result = 0;
+  let result = null;
   switch (randomMathOperator) {
     case '+':
       result = randomNumber1 + randomNumber2;
@@ -32,4 +27,11 @@ export default (str) => {
   const answer = String(result);
 
   return [question, answer];
+};
+
+
+export default () => {
+  const description = 'What is the result of the expression?';
+
+  return startGame(description, generateQuestionAndAnswer);
 };
