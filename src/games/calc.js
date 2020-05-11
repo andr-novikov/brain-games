@@ -1,5 +1,5 @@
 import getRandomNumber from '../getRandomNumber.js';
-import startGame from '../index.js';
+import playGame from '../index.js';
 
 const generateQuestionAndAnswer = () => {
   const mathOperators = ['+', '-', '*'];
@@ -9,7 +9,7 @@ const generateQuestionAndAnswer = () => {
   const randomNumber2 = getRandomNumber();
   const question = `${randomNumber1} ${randomMathOperator} ${randomNumber2}`;
 
-  let result = null;
+  let result;
   switch (randomMathOperator) {
     case '+':
       result = randomNumber1 + randomNumber2;
@@ -33,5 +33,5 @@ const generateQuestionAndAnswer = () => {
 export default () => {
   const description = 'What is the result of the expression?';
 
-  return startGame(description, generateQuestionAndAnswer);
+  return playGame(description, generateQuestionAndAnswer);
 };
