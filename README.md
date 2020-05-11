@@ -1,3 +1,10 @@
+## backend-project-lvl1
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/aefe1af55335eabcb423/maintainability)](https://codeclimate.com/github/andr-novikov/backend-project-lvl1/maintainability)
+![Eslint](https://github.com/andr-novikov/backend-project-lvl1/workflows/Eslint/badge.svg)
+
+---
+
 This repository contains the collection of games to train brain.  
 At the moment you can play the following games:
 1. Parity Check
@@ -10,14 +17,6 @@ At the moment you can play the following games:
     * find number is missing in the arithmetic progression.
 5. Number Is Prime?
     * answer *"yes"* if the number is prime, otherwise answer *"no"*.
-
----
-
-## backend-project-lvl1
-
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/aefe1af55335eabcb423/maintainability)](https://codeclimate.com/github/andr-novikov/backend-project-lvl1/maintainability)
-![Eslint](https://github.com/andr-novikov/backend-project-lvl1/workflows/Eslint/badge.svg)
 
 ---
 
