@@ -33,5 +33,5 @@ const generateQuestionAndAnswer = () => {
 export default () => {
   const description = 'What is the result of the expression?';
 
-  return playGame(description, generateQuestionAndAnswer);
+  playGame(description, generateQuestionAndAnswer);
 };

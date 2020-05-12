@@ -26,5 +26,5 @@ const generateQuestionAndAnswer = () => {
 export default () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  return playGame(description, generateQuestionAndAnswer);
+  playGame(description, generateQuestionAndAnswer);
 };

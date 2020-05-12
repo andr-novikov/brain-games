@@ -23,5 +23,5 @@ const generateQuestionAndAnswer = () => {
 export default () => {
   const description = 'What number is missing in the progression?';
 
-  return playGame(description, generateQuestionAndAnswer);
+  playGame(description, generateQuestionAndAnswer);
 };
