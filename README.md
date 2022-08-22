@@ -1,5 +1,5 @@
 ## Brain Games
-[![Maintainability](https://api.codeclimate.com/v1/badges/aefe1af55335eabcb423/maintainability)](https://codeclimate.com/github/andr-novikov/brain-games/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d3eb54d6c0a18ceefc12/maintainability)](https://codeclimate.com/github/andr-novikov/brain-games/maintainability)
 ![Eslint](https://github.com/andr-novikov/brain-games/workflows/Eslint/badge.svg)
 
 This repository contains the collection of games to train brain.  
