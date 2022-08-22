@@ -1,5 +1,5 @@
 {
-  "name": "backend-educational-project-lvl1",
+  "name": "@hexlet/code",
   "version": "2.0.0",
   "description": "Collection of games to train brain",
   "type": "module",
@@ -17,20 +17,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andr-novikov/backend-project-lvl1.git"
+    "url": "git+https://github.com/andr-novikov/brain-games.git"
   },
   "author": "Andrey Novikov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andr-novikov/backend-project-lvl1/issues"
+    "url": "https://github.com/andr-novikov/brain-games/issues"
   },
-  "homepage": "https://github.com/andr-novikov/backend-project-lvl1#readme",
+  "homepage": "https://github.com/andr-novikov/brain-games#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2"
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
