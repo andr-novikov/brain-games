@@ -1,9 +1,6 @@
-## backend-project-lvl1
-
+## Brain Games
 [![Maintainability](https://api.codeclimate.com/v1/badges/aefe1af55335eabcb423/maintainability)](https://codeclimate.com/github/andr-novikov/backend-project-lvl1/maintainability)
 ![Eslint](https://github.com/andr-novikov/backend-project-lvl1/workflows/Eslint/badge.svg)
-
----
 
 This repository contains the collection of games to train brain.  
 At the moment you can play the following games:
